@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open on my phone — Get It Off Your Chest</title>
+<style>
+  :root{--teal:#0E8A94;--teal2:#23A6B3;--paper:#F2F8F9;--ink:#15272E;--muted:#5C6A70;--line:#CEDDE0;}
+  *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;}
+  body{background:var(--paper);color:var(--ink);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:24px;max-width:440px;width:100%;padding:32px 28px 30px;text-align:center;box-shadow:0 20px 50px rgba(14,138,148,.12);}
+  .mark{width:52px;height:52px;border-radius:15px;background:linear-gradient(140deg,var(--teal2),var(--teal));margin:0 auto 16px;position:relative;box-shadow:0 8px 20px rgba(14,138,148,.35);}
+  .mark::after{content:"";position:absolute;inset:0;margin:auto;width:19px;height:12px;border-left:4px solid #fff;border-bottom:4px solid #fff;transform:rotate(-45deg) translate(1px,-3px);}
+  h1{font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px;}
+  .sub{color:var(--muted);font-size:15px;line-height:1.5;margin-bottom:22px;}
+  .qrwrap{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;display:inline-block;margin-bottom:8px;}
+  .qrwrap img{display:block;width:280px;height:280px;}
+  .qrfallback{font-size:13px;color:var(--muted);}
+  .scan{font-size:14px;color:var(--ink);font-weight:600;margin:14px 0 22px;}
+  a.btn{display:block;background:linear-gradient(135deg,var(--teal2),var(--teal));color:#fff;text-decoration:none;font-weight:700;font-size:16px;padding:15px;border-radius:14px;box-shadow:0 8px 20px rgba(14,138,148,.3);word-break:break-all;}
+  .link{font-size:13px;color:var(--muted);margin-top:14px;word-break:break-all;}
+  .steps{text-align:left;background:var(--paper);border-radius:14px;padding:16px 18px;margin-top:22px;font-size:14px;line-height:1.6;color:var(--ink);}
+  .steps b{color:var(--teal);}
+  .steps ol{margin:8px 0 0 18px;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark"></div>
+    <h1>Get It Off Your Chest</h1>
+    <p class="sub">Point your phone's camera at this code to open the app, then add it to your home screen.</p>
+
+    <div class="qrwrap">
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&margin=0&color=0E8A94&bgcolor=FFFFFF&data=https%3A%2F%2Fkamrentaylor9.github.io%2Fget-it-off-your-chest%2F"
+        alt="QR code linking to the app"
+        onerror="this.style.display='none';document.getElementById('qrfb').style.display='block';">
+      <div id="qrfb" class="qrfallback" style="display:none;padding:40px 10px;">Couldn't load the QR image (no internet?). Use the link below instead.</div>
+    </div>
+    <p class="scan">📷 Scan with your phone camera</p>
+
+    <a class="btn" href="https://kamrentaylor9.github.io/get-it-off-your-chest/">Or tap here to open the app</a>
+    <p class="link">https://kamrentaylor9.github.io/get-it-off-your-chest/</p>
+
+    <div class="steps">
+      <b>To keep it on your phone forever:</b>
+      <ol>
+        <li>Open the app on your phone (scan or tap above).</li>
+        <li><b>iPhone:</b> tap the <b>Share</b> icon → <b>Add to Home Screen</b>.<br><b>Android:</b> tap the <b>⋮</b> menu → <b>Add to Home screen</b> / <b>Install app</b>.</li>
+        <li>Done — the teal icon lives on your home screen like a real app.</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
