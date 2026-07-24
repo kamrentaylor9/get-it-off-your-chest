@@ -1,6 +1,6 @@
 /* Service worker: makes the app installable and work offline.
    Bump CACHE (e.g. chest-v2) whenever you change files so users get the update. */
-const CACHE = "chest-v1";
+const CACHE = "chest-v2";
 const ASSETS = [
   "./",
   "./index.html",

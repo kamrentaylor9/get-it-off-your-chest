@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get It Off Your Chest</title>
 <meta name="description" content="Turn a messy vent about how you feel into a clean one-page sheet for your doctor.">
-<meta name="theme-color" content="#6B3FA0">
+<meta name="theme-color" content="#0E8A94">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -18,14 +18,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FBF7F4;
-    --ink:#231A26;
-    --muted:#6E6274;
-    --faint:#A79CAB;
-    --line:#EBE2E6;
-    --line-2:#DDD1D8;
-    --plum:#6B3FA0;
-    --plum-2:#8B5CD6;
+    --paper:#F2F8F9;
+    --ink:#15272E;
+    --muted:#5C6A70;
+    --faint:#9FB0B5;
+    --line:#E1ECEE;
+    --line-2:#CEDDE0;
+    --plum:#0E8A94;
+    --plum-2:#23A6B3;
     --coral:#E8615A;
     --gold:#E0A32E;
     --sage:#4E9B7F;
@@ -39,23 +39,23 @@
     max-width:700px;margin:0 auto;height:100dvh;display:flex;flex-direction:column;overflow:hidden;position:relative;
   }
   body::before{content:"";position:absolute;inset:-10%;z-index:0;pointer-events:none;
-    background:radial-gradient(620px 300px at 12% -6%,rgba(139,92,214,.15),transparent 70%),
+    background:radial-gradient(620px 300px at 12% -6%,rgba(35,166,179,.15),transparent 70%),
                radial-gradient(520px 280px at 96% 8%,rgba(232,97,90,.11),transparent 70%),
                radial-gradient(560px 320px at 70% 108%,rgba(78,155,127,.10),transparent 72%);
     animation:drift 18s ease-in-out infinite;}
   @keyframes drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-16px,0) scale(1.05)}}
   button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
-  ::selection{background:rgba(139,92,214,.22)}
+  ::selection{background:rgba(35,166,179,.22)}
 
   header{padding:18px 20px 6px;position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;}
   .brand{display:flex;align-items:center;gap:11px;perspective:600px;}
   .mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(140deg,var(--plum-2),var(--plum));position:relative;
-    box-shadow:0 6px 18px rgba(107,63,160,.34),inset 0 1px 0 rgba(255,255,255,.4);
+    box-shadow:0 6px 18px rgba(14,138,148,.34),inset 0 1px 0 rgba(255,255,255,.4);
     transform-style:preserve-3d;transition:transform .32s cubic-bezier(.2,.8,.3,1),box-shadow .3s;
     will-change:transform;cursor:pointer;animation:markfloat 6s ease-in-out infinite;}
   @keyframes markfloat{0%,100%{translate:0 0}50%{translate:0 -2.5px}}
-  .mark:hover{box-shadow:0 11px 28px rgba(107,63,160,.5),inset 0 1px 0 rgba(255,255,255,.45);}
-  .mark::after{content:"";position:absolute;inset:0;margin:auto;width:12px;height:7.5px;border-left:2.6px solid #fff;border-bottom:2.6px solid #fff;transform:translateZ(10px) rotate(-45deg) translate(1px,-2px);filter:drop-shadow(0 1px 1px rgba(48,20,80,.35));}
+  .mark:hover{box-shadow:0 11px 28px rgba(14,138,148,.5),inset 0 1px 0 rgba(255,255,255,.45);}
+  .mark::after{content:"";position:absolute;inset:0;margin:auto;width:12px;height:7.5px;border-left:2.6px solid #fff;border-bottom:2.6px solid #fff;transform:translateZ(10px) rotate(-45deg) translate(1px,-2px);filter:drop-shadow(0 1px 1px rgba(6,58,64,.35));}
   .mark .shine{position:absolute;inset:0;border-radius:inherit;pointer-events:none;
     background:radial-gradient(42px 42px at var(--mx,32%) var(--my,26%),rgba(255,255,255,.6),rgba(255,255,255,0) 60%);
     opacity:.85;mix-blend-mode:screen;transition:background .08s linear;}
@@ -77,7 +77,7 @@
 
   /* dump box */
   .dumpbox{background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:6px 6px 6px;box-shadow:0 10px 30px rgba(35,26,38,.06);transition:.2s;}
-  .dumpbox:focus-within{border-color:var(--plum-2);box-shadow:0 12px 34px rgba(107,63,160,.15);}
+  .dumpbox:focus-within{border-color:var(--plum-2);box-shadow:0 12px 34px rgba(14,138,148,.15);}
   .dumpbox textarea{width:100%;border:none;outline:none;resize:none;background:transparent;font-family:inherit;font-size:16.5px;line-height:1.6;color:var(--ink);padding:16px 16px 6px;min-height:150px;}
   .dumpbox textarea::placeholder{color:var(--faint);}
   .dumpfoot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 10px 8px 16px;}
@@ -89,8 +89,8 @@
   .starter:active{transform:scale(.96);}
 
   .go{background:linear-gradient(135deg,var(--plum-2),var(--plum));color:#fff;font-weight:700;font-size:15.5px;padding:14px 24px;border-radius:14px;
-      display:inline-flex;align-items:center;gap:9px;box-shadow:0 8px 20px rgba(107,63,160,.3);transition:transform .1s,box-shadow .2s,opacity .2s;}
-  .go:hover{transform:translateY(-1.5px);box-shadow:0 12px 26px rgba(107,63,160,.42);}
+      display:inline-flex;align-items:center;gap:9px;box-shadow:0 8px 20px rgba(14,138,148,.3);transition:transform .1s,box-shadow .2s,opacity .2s;}
+  .go:hover{transform:translateY(-1.5px);box-shadow:0 12px 26px rgba(14,138,148,.42);}
   .go:active{transform:scale(.97);}
   .go.quiet:hover{border-color:var(--plum-2);color:var(--plum);}
   .go[disabled]{opacity:.35;box-shadow:none;cursor:default;}
@@ -136,7 +136,7 @@
   .qgrid{display:flex;flex-wrap:wrap;gap:9px;margin:4px 0 18px;}
   .qchip{background:#fff;border:1.5px solid var(--line-2);color:var(--ink);font-size:14px;font-weight:500;padding:11px 16px;border-radius:14px;text-align:left;transition:.15s;box-shadow:0 2px 7px rgba(35,26,38,.03);animation:pop .3s both;}
   .qchip:hover{border-color:var(--plum-2);}
-  .qchip.sel{background:linear-gradient(135deg,var(--plum-2),var(--plum));border-color:transparent;color:#fff;box-shadow:0 6px 16px rgba(107,63,160,.26);}
+  .qchip.sel{background:linear-gradient(135deg,var(--plum-2),var(--plum));border-color:transparent;color:#fff;box-shadow:0 6px 16px rgba(14,138,148,.26);}
   .qchip.sel::before{content:"✓ ";font-weight:700;}
 
   .footbar{position:relative;z-index:2;padding:10px 18px calc(16px + env(safe-area-inset-bottom));background:linear-gradient(rgba(251,247,244,0),var(--paper) 32%);display:flex;gap:10px;}
