@@ -1,0 +1,10 @@
+# Claude Code local config
+.claude/
+
+# OS / editor junk
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/

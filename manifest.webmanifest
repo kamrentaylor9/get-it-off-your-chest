@@ -1,0 +1,16 @@
+{
+  "name": "Get It Off Your Chest",
+  "short_name": "Off Your Chest",
+  "description": "Turn a messy vent about how you feel into a clean one-page sheet for your doctor.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF7F4",
+  "theme_color": "#6B3FA0",
+  "categories": ["health", "medical", "lifestyle"],
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
