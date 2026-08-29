@@ -39,3 +39,17 @@ Timestamp is added automatically in UTC.
 Cron fires hourly 13:00-21:00 UTC on weekdays (covers 9am-5pm ET, i.e.
 pre-market through the close). US markets are CLOSED Sat 8/29 and Sun 8/30.
 First live session is Monday 2026-08-31.
+
+## Tool names are NOT stable across wakes
+
+Validated 2026-08-29: after a scheduled wake the Webull MCP server came back
+under a different prefix — `mcp__Webull__*` became
+`mcp__dfdeb13a-6d4f-4bf0-8871-427a9e613656__*`, and the old names were gone.
+The connector itself survives the resume; only the prefix changes.
+
+So on every wake, do NOT assume a prefix. Resolve the tools first:
+
+    ToolSearch  query="get_gainers_losers get_most_active"
+
+then call whatever prefix comes back. All tool names in this run-book are
+deliberately written bare for that reason.
