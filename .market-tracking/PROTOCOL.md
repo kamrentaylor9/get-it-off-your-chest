@@ -53,3 +53,9 @@ So on every wake, do NOT assume a prefix. Resolve the tools first:
 
 then call whatever prefix comes back. All tool names in this run-book are
 deliberately written bare for that reason.
+
+## Holiday note
+
+Monday 2026-09-07 is Labor Day; US markets are closed. The cron fires on
+weekdays regardless, so that day's snapshots will return stale Friday data.
+Record them as tier `holiday` or skip, but do not present them as live.
