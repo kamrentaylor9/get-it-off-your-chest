@@ -1269,3 +1269,4 @@ ts_utc,tier,source,symbol,name,price,change_ratio,volume,market_value
 2026-09-04T21:03:17Z,core,AFTERMKT,AMD,"Advanced Micro Devices",476.05,-0.003183,19370570,7.79621e11
 2026-09-04T21:03:17Z,core,AFTERMKT,ASML,"ASML Holding",1709.69,-0.003026,1261775,6.58685e11
 2026-09-04T21:03:17Z,core,AFTERMKT,SKHY,"SK Hynix",175.76,-0.007006,20578997,1.29009e12
+2026-09-07T13:15:35Z,holiday,LABOR_DAY,NONE,"US markets closed - feed replaying Friday close, no rows recorded",0,0,0,0
