@@ -59,3 +59,7 @@ deliberately written bare for that reason.
 Monday 2026-09-07 is Labor Day; US markets are closed. The cron fires on
 weekdays regardless, so that day's snapshots will return stale Friday data.
 Record them as tier `holiday` or skip, but do not present them as live.
+
+Only ONE holiday marker per closed day. Later fires that same day should make
+a single snapshot call to confirm the feed is still replaying the prior close,
+then exit without recording or committing. Verify; never assume.
